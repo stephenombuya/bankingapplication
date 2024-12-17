@@ -1,18 +1,14 @@
 package bankingApplication;
 
-import java.util.Scanner;
-
 public class BankingApplication {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter customer name: ");
-        String name = scanner.nextLine();
-
-        System.out.print("Enter customer ID: ");
-        String id = scanner.nextLine();
-
-        BankAccount account = new BankAccount(name, id);
-        account.showMenu();
+        String name = JOptionPane.showInputDialog("Enter your name:");
+        String id = JOptionPane.showInputDialog("Enter your customer ID:");
+        if (name != null && id != null && !name.isEmpty() && !id.isEmpty()) {
+            BankAccount bankAccount = new BankAccount(name, id);
+            new BankAccountGUI(bankAccount);
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid input. Exiting application.");
+        }
     }
 }
