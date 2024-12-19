@@ -34,8 +34,8 @@ The project consists of the following key files:
 BankingApplication/
 └── bankingapplication/
 │       ├── BankAccount.java
-│       ├── BankingApplication.java
-│       ├── BankAccountGUI.java   
+│       ├── BankAccountGUI.java
+│       ├── DatabaseConnection.java
 │
 └── README.md
 ```
